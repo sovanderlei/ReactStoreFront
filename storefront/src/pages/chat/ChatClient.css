@@ -1,0 +1,138 @@
+/* chat  */
+.chatFixedRight { 
+    background: #dbdcdb;
+    height: 80px;
+    width: 350px;
+    padding: 3px;
+    position: fixed;
+    bottom: 10px;
+    right: 32px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, 
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+    rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+   }
+   .chatBoxBackg { 
+      background-color: white;
+      height: 100%;
+   }
+   .chatBoxTitle{
+    background-color: #FF7F24;
+    margin: 0px;
+    padding: 0px;
+   
+   }
+   .chatBoxImgLog{
+      background-color: #282c34;
+      padding: 4px;
+      max-width: 68px;
+  
+   }
+   .chatBoxTitleLog{
+    background-color: #FF7F24;
+    padding-top: 5px;
+    color: black;
+    width: 80%;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+  
+  }
+  .chatBoxBody{ 
+    overflow: auto;
+    height:460px;
+    background-color: white;
+  }
+  .chatBoxFoot{ 
+    height: 60px;
+    background-color: #528B8B;
+    padding: 4px;
+    padding-top: 15px;
+ 
+  }
+  .chatBoxCicleGreen{ 
+     background-color:'green';
+     width:20;
+     height: 20;
+  }
+  .chatBoxCicleAut{ 
+    width:30;
+    padding-left:3;
+  }
+  
+   
+  
+  .col-md-2, .col-md-10{
+    padding:0;
+  }
+    
+  .chatmsg_receive{
+    padding-left:0;
+    margin-left:0;
+  }
+  .chatmsg_sent{
+    padding-bottom:20px !important;
+    margin-right:0;
+  }
+  .chatmessages {
+  background: #FFF8DC;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  max-width:100%;
+  color:black;
+  font-size: 13;
+  }
+  .chatmessages > p {
+    font-size: 13px;
+    margin: 0 0 0.2rem 0;
+  }
+  .chatmessages > time {
+    font-size: 11px;
+    color: #ccc;
+  }
+  .chatmsg_container {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+  }
+  .chatimg {
+    display: block;
+    width: 100%;
+  }
+  .chatavatar {
+    position: relative;
+  }
+  .chatbase_receive > .chatavatar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid #FFF;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+  }
+  
+  .chatbase_sent {
+  justify-content: flex-end;
+  align-items: flex-end;
+  }
+  .chatbase_sent > .chatavatar:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 1px 1px 2px rgba(black, 0.2); 
+  }
+  
+  .chatmsg_sent > time{
+    float: right;
+  }
+  
+   
