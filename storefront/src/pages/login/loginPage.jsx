@@ -24,6 +24,14 @@ export default function LoginPage() {
         });  
     }
 
+    // rederize = rederaize 
+    // measure = miger medir 
+    // vertical = vârtical igual parson
+    // radius reidius 
+    // button bâtân 
+    // context contéxti
+    // for me to não esquecer o "to"
+
     return (
         <div id="login" className="Auth-form-container">
             <form onSubmit={handleSubmit}  className="Auth-form">

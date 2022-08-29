@@ -1,13 +1,14 @@
+/* eslint-disable no-useless-concat */
 import React from 'react';
 import './Dashboard.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faGlobe,faRefresh,
   faVectorSquare,faMoneyBillTrendUp,
-  faFileWaveform} from "@fortawesome/free-solid-svg-icons";
+  faFileWaveform} from "@fortawesome/free-solid-svg-icons";  
+import ChartLine from '../../components/ChartLine'
 
 export function Dashboard() { 
-    
-
+  
     function getCardsDasboard(){
       const tbdata = [
         {id:'01', category:'Capacity',title:'150GB', foot:'Update Now',iconname:'faGlobe', classcard:'card card-stats bg-light', clasname:'nc-icon nc-globe text-warning' } ,
@@ -64,16 +65,84 @@ export function Dashboard() {
 
     }
 
+    function getChart001Dasboard(title){
+     
+      return( 
+          <div className="col-lg-6 ">
+              <div className="card card-stats bg-light" >
+              <div class="card-header">
+                 title 
+              </div> 
+                <div className="card-body ">
+                  <div className="row" > 
+                    <ChartLine title={title} />
+                  </div>
+                </div>
+                <div className="card-footer "> 
+                  <div className="stats"> 
+                      <FontAwesomeIcon icon={faRefresh}  className="fa fa-refresh"  aria-hidden="true" />
+                        {"  " + "rodape"}
+                  </div>
+                </div>
+              </div>
+          </div>
+
+      );
+
+    }
+  
+    function getChart003Dasboard(){
+     
+      return( 
+          <div className="col-lg-3  ">
+              <div className="card card-stats bg-light" >
+              <div class="card-header">
+                 title 
+              </div> 
+                <div className="card-body ">
+                  <div className="row">
+                    body
+                    <div className="col-5 col-md-4">
+                      
+                    </div> 
+                  </div>
+                </div>
+                <div className="card-footer "> 
+                  <div className="stats"> 
+                      <FontAwesomeIcon icon={faRefresh}  className="fa fa-refresh"  aria-hidden="true" />
+                        {"  " + "rodape"}
+                  </div>
+                </div>
+              </div>
+          </div>
+
+      );
+
+    }
+ 
     return (
       <div style={{padding:10}} > 
        
-        <div className="row">
-
-            {getCardsDasboard()}
-             
-
+        <div className="row"> 
+            {getCardsDasboard()} 
         </div>        
-        
+        <div className="row"> 
+          {getChart001Dasboard("Title 001")}
+          {getChart001Dasboard("Title 002")}
+        </div> 
+        <div className="row"> 
+          {getChart003Dasboard()}
+          {getChart003Dasboard()}
+          {getChart003Dasboard()}    
+          {getChart003Dasboard()}         
+        </div>  
+        <div className="row"> 
+            vanderlei
+        </div>  
+        <div className="row"> 
+            vanderlei
+        </div>          
+
       </div>
     );
    
