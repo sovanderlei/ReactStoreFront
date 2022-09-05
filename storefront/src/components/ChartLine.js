@@ -11,7 +11,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
-
+/* https://www.npmjs.com/package/react-chartjs-2 */
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -20,23 +20,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend
-);
-
-const options = {
-  responsive: true,
-  maintainAspectRatio: true,
-  //width:"100%",
-  //height:"200",
-  plugins: {
-    legend: {
-      position: "right",
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart',
-    },
-  },
-};
+); 
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July','Setember'];
 
@@ -59,7 +43,22 @@ const data = {
 };
 
 function ChartLine(props) {
-  options.plugins.title.text = props.title;
+  const options = {
+    responsive: true,
+    maintainAspectRatio: true,
+    //width:"100%",
+    //height:"200",
+    plugins: {
+      legend: {
+        position: "right",
+      },
+      title: {
+        display: true,
+        text: props.title,
+      },
+    },
+  }; 
+
   return <Line  options={options} data={data}  />;
 }
 

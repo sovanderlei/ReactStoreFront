@@ -21,6 +21,7 @@ import {Dashboard}  from './pages/dashboard/Dashboard'
 import {AuthProvider} from './context/AuthContext'; 
 import BuggyCounterShow from './pages/erroPage/BuggyCounterShow';
 import ErrorBoundary from './pages/erroPage/ErrorBoundary';
+import ChatTag from './pages/chatTag/chatTag';
  
 
 const ProtectedRoute = ({ privat, children }) => {
@@ -48,9 +49,8 @@ const RoutesApp = () =>{
                                         <AuthProvider>
                                         <Routes>  
                                         
-                                        {/* <Route path="/login" exact element={<LoginPage />} />;    */}
-                                        {/* <Route path="/login" exact element={<Dashboard /> } />; */}
-                                        <Route path="/login" exact element={<BuggyCounterShow /> } />;
+                                        <Route path="/login" exact element={<LoginPage />} />; 
+                                        {/* <Route path="/login" exact element={<BuggyCounterShow /> } />;  */}
                                         <Route path="/" exact element={<ProtectedRoute privat={true}><Home /></ProtectedRoute>} />;
                                         <Route path="/home" exact element={<ProtectedRoute privat={true}><Home /></ProtectedRoute>} />;
                                         <Route path="/chatserver" exact element={<ProtectedRoute privat={true}><ChatServer /></ProtectedRoute>} />;  
@@ -59,8 +59,9 @@ const RoutesApp = () =>{
                                         <Route path="/usersDetail/:id"  element={<ProtectedRoute privat={true}><UsersDetail /></ProtectedRoute>}  />;
                                         <Route path="/listgrid"  element={<ProtectedRoute privat={true}><ListGrid /></ProtectedRoute>}  />;
                                         <Route path="/tablegrid"  element={<ProtectedRoute privat={true}><TableGrid /></ProtectedRoute>}  />;
-                                        {/* <Route path="/dashboard"  element={<ProtectedRoute privat={true}><Dashboard /></ProtectedRoute>}  />; */}
-                                        
+                                        <Route path="/dashboard"  element={<ProtectedRoute privat={true}><Dashboard /></ProtectedRoute>}  />; 
+                                        <Route path="/chattag"  element={<ProtectedRoute privat={true}><ChatTag /></ProtectedRoute>}  />;   
+                                        <Route path="/buggycountershow" exact element={<BuggyCounterShow /> } />; 
                                         
                                         </Routes>
                                         </AuthProvider>

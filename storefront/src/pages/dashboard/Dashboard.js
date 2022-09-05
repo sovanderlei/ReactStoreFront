@@ -6,6 +6,10 @@ import {faGlobe,faRefresh,
   faVectorSquare,faMoneyBillTrendUp,
   faFileWaveform} from "@fortawesome/free-solid-svg-icons";  
 import ChartLine from '../../components/ChartLine'
+import { ChartPizza } from './../../components/ChartPizza';
+import { ChartGauge } from '../../components/ChartGauge';
+import { ChartBarvert } from './../../components/ChartBarVert';
+import { ChartArea } from './../../components/ChartArea';
 
 export function Dashboard() { 
   
@@ -71,7 +75,7 @@ export function Dashboard() {
           <div className="col-lg-6 ">
               <div className="card card-stats bg-light" >
               <div class="card-header">
-                 title 
+                {title} 
               </div> 
                 <div className="card-body ">
                   <div className="row" > 
@@ -90,20 +94,37 @@ export function Dashboard() {
       );
 
     }
+
+    function getChartType(typeChart,titlest){
+      if(typeChart === "ChartPizza"){
+        return <ChartPizza title={titlest}></ChartPizza>;
+      }
+      if(typeChart === "ChartGauge"){
+        return <ChartGauge></ChartGauge>;
+      }
+      if(typeChart === "ChartBarvert"){
+        return <ChartBarvert></ChartBarvert>
+      }
+      if(typeChart === "ChartArea"){
+        return <ChartArea></ChartArea>
+      } 
+    }
   
-    function getChart003Dasboard(){
+    function getChart003Dasboard(typeChart,titlest,paddingTopgt,paddingLeftt){
      
       return( 
           <div className="col-lg-3  ">
               <div className="card card-stats bg-light" >
               <div class="card-header">
-                 title 
+                 {titlest} 
               </div> 
                 <div className="card-body ">
                   <div className="row">
-                    body
-                    <div className="col-5 col-md-4">
+                   
+                    <div className="col-12" style={{minHeight: 400, paddingTop:paddingTopgt, paddingLeft: paddingLeftt}} >
                       
+                      {getChartType(typeChart,titlest)}
+
                     </div> 
                   </div>
                 </div>
@@ -131,16 +152,16 @@ export function Dashboard() {
           {getChart001Dasboard("Title 002")}
         </div> 
         <div className="row"> 
-          {getChart003Dasboard()}
-          {getChart003Dasboard()}
-          {getChart003Dasboard()}    
-          {getChart003Dasboard()}         
+          {getChart003Dasboard("ChartPizza","Chart Pizza", 0, 0)}
+          {getChart003Dasboard("ChartGauge","Chart Gauge", 100, 60)}
+          {getChart003Dasboard("ChartBarvert","Chart Barvert", 0, 0)}    
+          {getChart003Dasboard("ChartArea","Chart Area", 0, 0)}         
         </div>  
         <div className="row"> 
-            vanderlei
+             
         </div>  
         <div className="row"> 
-            vanderlei
+             
         </div>          
 
       </div>

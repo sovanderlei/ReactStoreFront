@@ -89,8 +89,8 @@ export const Headers = () =>{
                     </NavDropdown>
                     <NavDropdown title="Control" id="collasible-nav-dropdown">
                         <NavDropdown.Item href="chatserver">chat Server</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Ação 02</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Ação 03</NavDropdown.Item>
+                        <NavDropdown.Item href="chattag">chat Tag</NavDropdown.Item>
+                        <NavDropdown.Item href="buggycountershow">BuggyCounterShow</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.4">Ação 04</NavDropdown.Item>
                     </NavDropdown>
